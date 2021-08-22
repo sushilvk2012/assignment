@@ -41,15 +41,22 @@
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Messages">
-          <a class="nav-link" href="admin/product">
-            <i class="fa fa-list-alt"></i>
-            <span class="nav-link-text">Product</span>
+          <a class="nav-link" href="admin/company">
+            <i class="fa fa-building-o"></i>
+            <span class="nav-link-text">Company</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Bookings">
-          <a class="nav-link" href="admin/cart">
-            <i class="fa fa-shopping-cart"></i>
-            <span class="nav-link-text">Cart</span>
+          <a class="nav-link" href="admin/department">
+            <i class="fa fa-briefcase"></i>
+            <span class="nav-link-text">Department</span>
+          </a>
+        </li>
+
+         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Bookings">
+          <a class="nav-link" href="admin/employee">
+            <i class="fa fa-user"></i>
+            <span class="nav-link-text">Employee</span>
           </a>
         </li>
        
