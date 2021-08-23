@@ -60,6 +60,7 @@ $route['admin/company/add'] = 'admin/Company/add';
 $route['admin/company/edit/(:num)'] = 'admin/Company/edit/$1';
 $route['admin/company/delete/(:num)'] = 'admin/Company/delete/$1';
 
+
 $route['admin/department'] = 'admin/Department/index';
 $route['admin/department/add'] = 'admin/Department/add';
 $route['admin/department/edit/(:num)'] = 'admin/Department/edit/$1';
@@ -77,6 +78,7 @@ $route['admin/api/company/add'] = 'api/Company/add';
 $route['admin/api/company/edit/(:num)'] = 'api/Company/edit/$1';
 $route['admin/api/company/post'] = 'api/Company/post';
 $route['admin/api/company/delete/(:num)'] = 'api/Company/delete/$1';
+$route['admin/api/company/department/(:num)'] = 'api/Company/department/$1';
 
 $route['admin/api/department'] = 'api/Department/index';
 $route['admin/api/department/(:num)'] = 'api/Department/index/$1';

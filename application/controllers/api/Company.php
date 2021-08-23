@@ -35,6 +35,25 @@ class Company extends CI_Controller
  
     }
 
+    public function department($id="")
+    {
+        
+
+        $this->db->select('department.department_id,department.department_name');
+        $this->db->from('department');
+        $this->db->join('company', 'company.company_id = department.company_id');
+
+        $this->db->where('department.company_id',$id);
+ 
+        $query = $this->db->get();
+
+        $this->json = $query->result_array();
+
+        echo json_encode($this->json);
+           
+    
+    }
+
     public function add()
     {
 

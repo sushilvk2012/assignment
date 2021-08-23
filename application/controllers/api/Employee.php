@@ -1,7 +1,7 @@
 <?php
 
 
-class Department extends CI_Controller
+class Employee extends CI_Controller
 {
 
     private $json = array();
@@ -19,14 +19,14 @@ class Department extends CI_Controller
   
     public function index($id="")
     {
-        
 
-        $this->db->select('department.*,company.company_name');
-        $this->db->from('department');
-        $this->db->join('company', 'company.company_id = department.company_id');
+        $this->db->select('*');
+        $this->db->from('employee');
+        $this->db->join('company', 'company.company_id = employee.company_id');
+        $this->db->join('department', 'department.department_id = employee.department_id');
 
         if($id > 0 ){
-            $this->db->where('department.department_id',$id);
+            $this->db->where('employee.emp_id',$id);
         }
 
         $query = $this->db->get();
@@ -48,13 +48,13 @@ class Department extends CI_Controller
             $post_data = $this->security->xss_clean($this->input->post());
             $post_data['created_on'] = date('Y-m-d H:i:s');
       
-            $this->db->insert('department',$post_data);
+            $this->db->insert('employee',$post_data);
 
             $department_id = $this->db->insert_id();
 
             if($department_id){
 
-                $this->json = array('type' => 'success','title' => 'Success','msg' => 'Department has been created successfully.','status' => '200');
+                $this->json = array('type' => 'success','title' => 'Success','msg' => 'Employee has been created successfully.','status' => '200');
 
             }else{
                 $this->json = array('type' => 'warning','title' => 'Warning','msg' => 'Something went wrong.','status' => '400');
@@ -77,9 +77,9 @@ class Department extends CI_Controller
 
             $id = $this->security->xss_clean($id);
       
-            $this->db->where('department_id',$id)->update('department',$post_data);
+            $this->db->where('emp_id',$id)->update('employee',$post_data);
 
-            $this->json = array('type' => 'success','title' => 'Success','msg' => 'Department has been updated successfully.','status' => '200');
+            $this->json = array('type' => 'success','title' => 'Success','msg' => 'Employee has been updated successfully.','status' => '200');
         }
 
 
@@ -97,9 +97,9 @@ class Department extends CI_Controller
             $id = $this->security->xss_clean($id);
            
       
-            $this->db->where('department_id',$id)->delete('department');
+            $this->db->where('employee_id',$id)->delete('employee');
 
-            $this->json = array('type' => 'success','title' => 'Success','msg' => 'Department has been deleted successfully.','status' => '200');
+            $this->json = array('type' => 'success','title' => 'Success','msg' => 'Employee has been deleted successfully.','status' => '200');
         }
 
 

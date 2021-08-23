@@ -731,3 +731,17 @@ function showpassword(type) {
     x.type = "password";
   }
 }
+
+$("#company").change(function(){
+
+	$.getJSON($('base').attr('href')+'admin/api/company/department/'+($(this).val()?$(this).val():0), function(data){
+	    
+	    var options = "";
+	    options +="<option value=''>Select Department</option>"
+	    $.each(data, function( index, value ) {
+		 	options +="<option value='"+value['department_id']+"'>"+value['department_name']+"</option>"
+		});
+
+		$("#department").html(options);
+	});	
+});
