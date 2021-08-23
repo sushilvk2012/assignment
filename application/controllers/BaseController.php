@@ -53,5 +53,26 @@ class BaseController extends CI_Controller
    
     }
 
+    public function apiCall($fields = array(),$action,$method='GET'){
+
+  
+        $ch = curl_init();
+        curl_setopt($ch,CURLOPT_URL,base_url('/admin/api/'.$action));
+
+        if($method == 'post'){
+            curl_setopt($ch, CURLOPT_POST, true);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
+        }
+
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        // curl_setopt($ch, CURLOPT_HTTPHEADER, 'Accept: application/json');
+        $res = curl_exec($ch);
+        curl_close($curl);
+        return $res;
+ 
+    }
+
+   
+
 
 }

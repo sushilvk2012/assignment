@@ -51,9 +51,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 $route['default_controller'] = 'admin/Home/login';
-$route['admin/login'] = 'admin/Home/login';
 
+$route['admin/login'] = 'admin/Home/login';
 $route['admin/dashboard'] = 'admin/Home/dashboard';
+
+$route['admin/company'] = 'admin/Company/index';
+$route['admin/company/add'] = 'admin/Company/add';
+$route['admin/company/edit/(:num)'] = 'admin/Company/edit/$1';
+$route['admin/company/delete/(:num)'] = 'admin/Company/delete/$1';
+
+$route['admin/department'] = 'admin/Department/index';
+$route['admin/employee'] = 'admin/Employee/index';
+
+// API
+$route['admin/api/company'] = 'api/Company/index';
+$route['admin/api/company/(:num)'] = 'api/Company/index/$1';
+$route['admin/api/company/add'] = 'api/Company/add';
+$route['admin/api/company/edit/(:num)'] = 'api/Company/edit/$1';
+$route['admin/api/company/post'] = 'api/Company/post';
+$route['admin/api/company/delete/(:num)'] = 'api/Company/delete/$1';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
