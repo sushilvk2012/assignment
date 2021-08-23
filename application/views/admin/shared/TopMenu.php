@@ -22,7 +22,14 @@
   <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
  
  <link href="assets/js/sweetalert/sweetalert.css" rel="stylesheet">
-
+ <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+<!--  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTables.jqueryui.min.css"> -->
+ <style type="text/css">
+   .table-responsive {
+     overflow-x: hidden!important;
+    }
+ </style>
 </head>
 
 <body class="fixed-nav sticky-footer" id="page-top">

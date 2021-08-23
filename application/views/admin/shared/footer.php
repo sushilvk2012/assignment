@@ -40,7 +40,19 @@
     <script src="assets/js/sweetalert/sweetalert.min.js"></script>
     <script src="assets/js/admin.js"></script>
      <script src="assets/js/js_class.js"></script>
-    
+    <script type="text/javascript" src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src=" https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/dataTables.jqueryui.min.js"></script>
+
+    -->
+
+    <script type="text/javascript">
+      $(document).ready( function () {
+    $('#dataTable').DataTable();
+} );
+    </script>
+
     <?php 
      $message = $this->session->flashdata('message');
     if(count($message) > 0 ){
@@ -49,6 +61,8 @@
      swal("<?php echo $message['title'] ?>", "<?php echo $message['msg'] ?>", "<?php echo $message['type'] ?>");
     </script>
     <?php } ?>
+
+
 </body>
 </html>
 
