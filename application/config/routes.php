@@ -94,5 +94,7 @@ $route['admin/api/employee/edit/(:num)'] = 'api/Employee/edit/$1';
 $route['admin/api/employee/post'] = 'api/Employee/post';
 $route['admin/api/employee/delete/(:num)'] = 'api/Employee/delete/$1';
 
+$route['admin/logout'] = 'admin/Home/logout';
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
