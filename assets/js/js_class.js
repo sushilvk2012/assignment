@@ -682,52 +682,10 @@ function overlayBox(popupID)
 
 /*Overlay function end*/
 
+$('select[data-selected]').each(function(){
+    $(this).find('option[value="'+$(this).data('selected')+'"]').attr("selected","selected");
+});
 
- var cart = {
-    'add': function(course_id) {
-       	
-
-
-        $.ajax({
-            url: 'addToCart',
-            type: 'post',
-            data: 'course_id=' + course_id,
-            success: function(data) {
-              	// console.log(data);
-              	window.location.href = "cart"
-            }
-        });
-    },
-    'update': function(key, quantity) {
-
-        $.ajax({
-            url: 'Cart/updateCart',
-            type: 'post',
-            data: 'key=' + key + '&quantity=' + quantity,
-            success: function(json) {
-
-                if(json==true){
-                  console.log('update');
-                }
-            },
-            error: function(xhr, ajaxOptions, thrownError) {
-                alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-            }
-        });
-    },
-    'remove': function(key) {
-        $.ajax({
-            url: 'removeCart',
-            type: 'post',
-            data: 'key=' + key,
-            success: function(json) {
-               window.location.reload();
-            }
-           
-        });
-    },
-
-}
 
 $(document).on("change","#userProfile",function(){
 

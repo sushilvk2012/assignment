@@ -12,7 +12,7 @@
       
       <div class="box_general padding_bottom">
         <div class="header_box version_2">
-          <h2><i class="fa fa-file"></i>Company Details</h2>
+          <h2><i class="fa fa-file"></i>Company</h2>
         </div>
         <div class="row">
           <div class="col-md-6">

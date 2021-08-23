@@ -61,7 +61,14 @@ $route['admin/company/edit/(:num)'] = 'admin/Company/edit/$1';
 $route['admin/company/delete/(:num)'] = 'admin/Company/delete/$1';
 
 $route['admin/department'] = 'admin/Department/index';
+$route['admin/department/add'] = 'admin/Department/add';
+$route['admin/department/edit/(:num)'] = 'admin/Department/edit/$1';
+$route['admin/department/delete/(:num)'] = 'admin/Department/delete/$1';
+
 $route['admin/employee'] = 'admin/Employee/index';
+$route['admin/employee/add'] = 'admin/Employee/add';
+$route['admin/employee/edit/(:num)'] = 'admin/Employee/edit/$1';
+$route['admin/employee/delete/(:num)'] = 'admin/Employee/delete/$1';
 
 // API
 $route['admin/api/company'] = 'api/Company/index';
@@ -70,6 +77,20 @@ $route['admin/api/company/add'] = 'api/Company/add';
 $route['admin/api/company/edit/(:num)'] = 'api/Company/edit/$1';
 $route['admin/api/company/post'] = 'api/Company/post';
 $route['admin/api/company/delete/(:num)'] = 'api/Company/delete/$1';
+
+$route['admin/api/department'] = 'api/Department/index';
+$route['admin/api/department/(:num)'] = 'api/Department/index/$1';
+$route['admin/api/department/add'] = 'api/Department/add';
+$route['admin/api/department/edit/(:num)'] = 'api/Department/edit/$1';
+$route['admin/api/department/post'] = 'api/Department/post';
+$route['admin/api/department/delete/(:num)'] = 'api/Department/delete/$1';
+
+$route['admin/api/employee'] = 'api/Employee/index';
+$route['admin/api/employee/(:num)'] = 'api/Employee/index/$1';
+$route['admin/api/employee/add'] = 'api/Employee/add';
+$route['admin/api/employee/edit/(:num)'] = 'api/Employee/edit/$1';
+$route['admin/api/employee/post'] = 'api/Employee/post';
+$route['admin/api/employee/delete/(:num)'] = 'api/Employee/delete/$1';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
