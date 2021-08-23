@@ -58,7 +58,14 @@ class Home extends BaseController
 
 		$this->data['headerInfo']['page_title'] = 'Admin Dashboard';
 
-       
+       	$company = $this->apiCall('', 'company');
+       	$department = $this->apiCall('', 'department');
+       	$employee = $this->apiCall('', 'employee');
+      
+       	$this->data['pageInfo']['company'] = count(json_decode($company,true));
+       	$this->data['pageInfo']['department'] = count(json_decode($department,true));
+       	$this->data['pageInfo']['employee'] = count(json_decode($employee,true));
+
 
 
 		$this->loadAdminWebViews('admin/dashboard',$this->data);

@@ -16,7 +16,7 @@
               <div class="card-body-icon">
                 <i class="fa fa-fw fa-envelope-open"></i>
               </div>
-              <div class="mr-5"><h5>0 Total Company!</h5></div>
+              <div class="mr-5"><h5><?php echo $company; ?> Total Company!</h5></div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="admin/company">
               <span class="float-left">View Details</span>
@@ -33,7 +33,7 @@
               <div class="card-body-icon">
                 <i class="fa fa-fw fa-calendar-check-o"></i>
               </div>
-              <div class="mr-5"><h5>0 Total Department!</h5></div>
+              <div class="mr-5"><h5><?php echo $department; ?> Total Department!</h5></div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="admin/department">
               <span class="float-left">View Details</span>
@@ -50,7 +50,7 @@
               <div class="card-body-icon">
                 <i class="fa fa-fw fa-calendar-check-o"></i>
               </div>
-              <div class="mr-5"><h5>0 Total Employee!</h5></div>
+              <div class="mr-5"><h5><?php echo $employee; ?> Total Employee!</h5></div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="admin/employee">
               <span class="float-left">View Details</span>
